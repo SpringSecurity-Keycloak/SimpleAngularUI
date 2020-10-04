@@ -1,14 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
 html,
 body {
   height: 100%;
@@ -48,37 +37,13 @@ body {
   float: left;
   padding: 60px 50px 40px 50px;
   width: 100%;
-  background: #fff;
+  background: blueviolet;
   border-radius: 10px;
   transform: scale(1);
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   z-index: 5;
   max-width: 330px;
-}
-
-.box.back {
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  top: -20px;
-  opacity: 0.8;
-  z-index: -1;
-}
-
-.box:before {
-  content: "";
-  width: 100%;
-  height: 30px;
-  border-radius: 10px;
-  position: absolute;
-  top: -10px;
-  background: rgba(255, 255, 255, 0.6);
-  left: 0;
-  transform: scale(0.95);
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  z-index: -1;
 }
 
 .login-wrapper .example-form {
@@ -116,4 +81,45 @@ body {
 
 .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
+}
+
+.active {
+  background: purple;
+  color: white;
+}
+
+.mat-button.mat-submit,
+.mat-stroked-button.mat-submit {
+  background-color: darkmagenta;
+  color: #fff;
+  border: 0mm;
+}
+
+.container {
+  background-color: purple;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+div {
+  display: flex;
+}
+
+.banner {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  width: 100%;
+  background: rgb(66, 55, 138);
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  color: white;
+  border: 1px solid black;
 }
