@@ -6,8 +6,31 @@ import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './components/splash-screen/splash-screen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material.module';
-import { OAuthModule } from 'angular-oauth2-oidc';
+import {
+  OAuthModule,
+  AuthConfig,
+  JwksValidationHandler,
+  ValidationHandler,
+  OAuthStorage,
+  OAuthModuleConfig,
+} from 'angular-oauth2-oidc';
 import { HttpClientModule } from '@angular/common/http';
+import { environment } from '../environments/environment';
+//import { AuthGuardService } from './shared/auth/authguard.service';
+
+export const oktaConfig: AuthConfig = {
+  issuer: environment.okta.issuer,
+  clientId: environment.okta.clientId,
+  redirectUri: environment.okta.redirectUri,
+  scope: environment.okta.scope,
+};
+
+export const authOConfig: AuthConfig = {
+  issuer: environment.authO.issuer,
+  clientId: environment.authO.clientId,
+  redirectUri: environment.authO.redirectUri,
+  scope: environment.authO.scope,
+};
 
 @NgModule({
   declarations: [AppComponent, SplashScreenComponent],
@@ -19,7 +42,11 @@ import { HttpClientModule } from '@angular/common/http';
     OAuthModule.forRoot(),
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: ValidationHandler, useClass: JwksValidationHandler },
+    { provide: OAuthStorage, useValue: localStorage },
+    { provide: AuthConfig, useValue: oktaConfig },
+  ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

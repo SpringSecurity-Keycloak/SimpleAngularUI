@@ -1,17 +1,6 @@
 import { Component } from '@angular/core';
-import {
-  OAuthService,
-  JwksValidationHandler,
-  AuthConfig,
-} from 'angular-oauth2-oidc';
-import { environment } from '../environments/environment';
+import { OAuthService, OAuthErrorEvent, AuthConfig } from 'angular-oauth2-oidc';
 
-export const config: AuthConfig = {
-  issuer: environment.issuer,
-  clientId: environment.clientId,
-  redirectUri: window.location.origin,
-  scope: environment.scope,
-};
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -19,20 +8,46 @@ export const config: AuthConfig = {
 })
 export class AppComponent {
   title = 'SimpleAngularUI';
+  username = '';
 
-  constructor(private oauthService: OAuthService) {
-    this.oauthService.configure(config);
-    (this.oauthService.tokenValidationHandler = new JwksValidationHandler()),
-      // Load Discovery Document and then try to login the user
-      this.oauthService.loadDiscoveryDocumentAndTryLogin();
+  get token() {
+    return this.oauthService.getAccessToken();
   }
 
-  login() {
-    this.oauthService.initImplicitFlow();
+  get claims() {
+    return this.oauthService.getIdentityClaims();
+  }
+
+  constructor(private oauthService: OAuthService) {
+    oauthService.events.subscribe((e) =>
+      e instanceof OAuthErrorEvent ? console.error(e) : console.warn(e)
+    );
+
+    // Load information from Auth0 (could also be configured manually)
+    oauthService
+      .loadDiscoveryDocument()
+
+      // See if the hash fragment contains tokens (when user got redirected back)
+      .then(() => oauthService.tryLogin())
+
+      // If we're still not logged in yet, initiate implicit Flow
+      .then(() => {
+        if (!oauthService.hasValidAccessToken()) {
+          return oauthService.initImplicitFlow();
+        }
+      })
+
+      // Get username, if possible.
+      .then(() => {
+        if (oauthService.getIdentityClaims()) {
+          this.username = oauthService.getIdentityClaims()['name'];
+        }
+      });
   }
 
   logout() {
     this.oauthService.logOut();
+    this.oauthService.initImplicitFlow();
   }
 
   get givenName() {

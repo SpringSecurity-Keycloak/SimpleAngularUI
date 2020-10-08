@@ -4,10 +4,18 @@
 
 export const environment = {
   production: false,
-  issuer: 'https://dev-376411.okta.com',
-  clientId: '####',
-  redirectUri: window.location.origin,
-  scope: 'openid profile email',
+  okta: {
+    issuer: 'https://dev-376411.okta.com',
+    clientId: '0oa5tyodzfkBHvPou357',
+    redirectUri: window.location.origin,
+    scope: 'openid profile email',
+  },
+  authO: {
+    issuer: 'https://dev-r1e4o7ny.us.auth0.com/',
+    clientId: '9XLqEdiegPL55OISpeXd6u4M3bnPGbcy',
+    redirectUri: window.location.origin,
+    scope: 'openid profile email',
+  },
 };
 
 /*
