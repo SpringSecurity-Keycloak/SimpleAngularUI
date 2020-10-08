@@ -47,7 +47,7 @@ export class AppComponent {
 
   logout() {
     this.oauthService.logOut();
-    this.oauthService.initImplicitFlow();
+    //this.oauthService.initImplicitFlow();
   }
 
   get givenName() {

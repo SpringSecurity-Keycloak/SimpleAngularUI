@@ -15,6 +15,10 @@ export const environment = {
     clientId: '9XLqEdiegPL55OISpeXd6u4M3bnPGbcy',
     redirectUri: window.location.origin,
     scope: 'openid profile email',
+    response_type: 'id_token token',
+    logoutUrl:
+      'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=http://localhost:4200&client_id=9XLqEdiegPL55OISpeXd6u4M3bnPGbcy',
+    postLogoutRedirectUri: 'http://localhost:4200',
   },
 };
 

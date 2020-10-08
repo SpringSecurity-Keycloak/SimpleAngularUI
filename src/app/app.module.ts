@@ -30,6 +30,9 @@ export const authOConfig: AuthConfig = {
   clientId: environment.authO.clientId,
   redirectUri: environment.authO.redirectUri,
   scope: environment.authO.scope,
+  logoutUrl: environment.authO.logoutUrl,
+  postLogoutRedirectUri: environment.authO.postLogoutRedirectUri,
+  showDebugInformation: true,
 };
 
 @NgModule({
