@@ -4,6 +4,12 @@
 
 export const environment = {
   production: false,
+  keyCloak: {
+    issuer: 'http://localhost:9080/auth/realms/MicroServices',
+    clientId: 'SimpleAngularUI',
+    redirectUri: window.location.origin,
+    scope: 'openid profile email',
+  },
   okta: {
     issuer: 'https://dev-376411.okta.com',
     clientId: '0oa5tyodzfkBHvPou357',

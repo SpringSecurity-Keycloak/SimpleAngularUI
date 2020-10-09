@@ -18,6 +18,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { environment } from '../environments/environment';
 //import { AuthGuardService } from './shared/auth/authguard.service';
 
+export const keyCloakConfig: AuthConfig = {
+  issuer: environment.keyCloak.issuer,
+  clientId: environment.keyCloak.clientId,
+  redirectUri: environment.keyCloak.redirectUri,
+  scope: environment.keyCloak.scope,
+};
+
 export const oktaConfig: AuthConfig = {
   issuer: environment.okta.issuer,
   clientId: environment.okta.clientId,
@@ -48,7 +55,7 @@ export const authOConfig: AuthConfig = {
   providers: [
     { provide: ValidationHandler, useClass: JwksValidationHandler },
     { provide: OAuthStorage, useValue: localStorage },
-    { provide: AuthConfig, useValue: authOConfig },
+    { provide: AuthConfig, useValue: keyCloakConfig },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
