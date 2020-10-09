@@ -48,7 +48,7 @@ export const authOConfig: AuthConfig = {
   providers: [
     { provide: ValidationHandler, useClass: JwksValidationHandler },
     { provide: OAuthStorage, useValue: localStorage },
-    { provide: AuthConfig, useValue: oktaConfig },
+    { provide: AuthConfig, useValue: authOConfig },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
