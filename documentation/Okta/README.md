@@ -8,11 +8,15 @@ Create a free Okta development account at [Okta.com](https://developer.okta.com/
 
 # Register your SPA application
 
-![Register SPA](./Okta_Add_application.png)
+| Register SPA                                |
+| ------------------------------------------- |
+| ![Register SPA](./Okta_Add_application.png) |
 
 # Choose Single-Page App
 
-![Choose Single-Page App Option](./Choose_Single_Page_App.png)
+| Choose SPA as the application type                             |
+| -------------------------------------------------------------- |
+| ![Choose Single-Page App Option](./Choose_Single_Page_App.png) |
 
 # Enter the application details
 
@@ -23,15 +27,24 @@ Create a free Okta development account at [Okta.com](https://developer.okta.com/
 - Grant Type Allowed : Implicit
 - Click on the Done Button
 
-![Enter Applcation Details](./Enter_App_Details.png)
+| Enter SPA details                                    |
+| ---------------------------------------------------- |
+| ![Enter Applcation Details](./Enter_App_Details.png) |
 
 Your Registered application should look similar to the screenshot below:
-![Final General Settings for SPA Application](./SPA_General_Settings.png)
+
+| SPA General Settings                                                      |
+| ------------------------------------------------------------------------- |
+| ![Final General Settings for SPA Application](./SPA_General_Settings.png) |
 
 # Make a note of the Client ID
 
-![Copy the Client ID](./Copy_Client_Credentials.png)
+| Copy Client Id                                       |
+| ---------------------------------------------------- |
+| ![Copy the Client ID](./Copy_Client_Credentials.png) |
 
 # Make a note of your account's issuer URL
 
-![Copy Account's Issuer URL](./Copy_issuer_url.png)
+| Copy Issuer URL                                     |
+| --------------------------------------------------- |
+| ![Copy Account's Issuer URL](./Copy_issuer_url.png) |
