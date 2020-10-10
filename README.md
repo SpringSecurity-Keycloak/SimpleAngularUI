@@ -1,4 +1,4 @@
-# SimpleAngularUI [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
+# SimpleAngularUI [![buddy pipeline](https://app.buddy.works/dennisvchacko/simpleangularui/pipelines/pipeline/284225/badge.svg?token=5815216d1e4318b9cf12d16708bc4f9b68833b78df3d38cd1ea111cd80ef6b6a "buddy pipeline")](https://app.buddy.works/dennisvchacko/simpleangularui/pipelines/pipeline/284225)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
