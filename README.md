@@ -1,4 +1,4 @@
-# SimpleAngularUI
+# SimpleAngularUI [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
