@@ -1,8 +1,63 @@
+# This code is licensed from CircleCI to the user under the MIT license.
+# See here for details: https://circleci.com/developer/orbs/licensing
 version: 2.1
+
+description: |
+  Build and publish Ionic/Angular libraries.
+
 orbs:
-  node: circleci/node@3.0.0
-workflows:
-  node-tests:
-    jobs:
-      - node/build
-      
+  common: okode/common@volatile
+
+executors:
+  node:
+    docker:
+      - image: circleci/node
+  browsers:
+    docker:
+      - image: circleci/node:browsers
+
+jobs:
+  test:
+    parameters:
+      project:
+        type: string
+      skip-tests:
+        type: boolean
+        default: true
+      skip-e2e:
+        type: boolean
+        default: true
+
+    executor: browsers
+    steps:
+      - checkout
+      - common/npm-install
+      - run:
+          name: Building
+          command: npm run build -- << parameters.project >>
+      - unless:
+          condition: << parameters.skip-tests >>
+          steps:
+            - common/chrome-upgrade
+            - run:
+                name: Running unit tests
+                command: npm run test -- << parameters.project >> --watch false --progress false
+            - unless:
+                condition: << parameters.skip-e2e >>
+                steps:
+                  - run:
+                      name: Running e2e tests
+                      command: npm run e2e
+            - store_test_results:
+                path: test-results
+  build:
+    parameters:
+      project:
+        type: string
+    executor: node
+    steps:
+      - checkout
+      - common/npm-install
+      - run:
+          name: Building
+          command: npm run build -- << parameters.project >>
