@@ -12,7 +12,7 @@ export const environment = {
   },
   okta: {
     issuer: 'https://dev-376411.okta.com',
-    clientId: '0oa5tyodzfkBHvPou357',
+    clientId: '0oa5vg37tblmP82zz357',
     redirectUri: window.location.origin,
     scope: 'openid profile email',
   },
