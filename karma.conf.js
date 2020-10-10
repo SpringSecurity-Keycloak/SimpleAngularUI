@@ -29,14 +29,20 @@ module.exports = function (config) {
     singleRun: true,
     restartOnFileChange: true,
 
-    browsers: ["ChromeHeadlessNoSandbox"],
+    browsers: ["Chrome_in_Docker"],
     customLaunchers: {
-      ChromeHeadlessNoSandbox: {
+      Chrome_in_Docker: {
         base: "ChromeHeadless",
-        flags: ["--no-sandbox"],
+        flags: [
+          "--disable-web-security",
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+          "--disable-dev-shm-usage",
+          "--remote-debugging-port=9223",
+          "--headless",
+          "--disable-gpu",
+        ],
       },
     },
   });
-  process.env.NO_PROXY = "localhost, 0.0.0.0/4201, 0.0.0.0/9876";
-  process.env.no_proxy = "localhost, 0.0.0.0/4201, 0.0.0.0/9876";
 };
