@@ -1,5 +1,8 @@
 version: 2
 
+orbs:
+  heroku: circleci/heroku@0.0.10
+
 jobs:
   # The build job
   build:
@@ -21,7 +24,7 @@ jobs:
       # Install project dependencies
       - run:
           name: Install local dependencies
-          command: npm install
+          command: sudo npm install
       # Cache local dependencies if they don't exist
       - save_cache:
           key: v1-dependencies-{{ checksum "package.json" }}
