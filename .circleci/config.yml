@@ -38,7 +38,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "staging" ]; then
                 npm run build
             elif [ "${CIRCLE_BRANCH}" == "master" ]; then
-                npm run build
+                npm run heroku-postbuild
             else
                 npm run build
             fi
