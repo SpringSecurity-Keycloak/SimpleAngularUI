@@ -7,7 +7,9 @@ workflows:
   # The build and deploy workflow
   build_and_deploy:
     jobs:
-      - heroku/deploy-via-git
+      - heroku/deploy-via-git:
+        context:
+          - Heroku
 
 jobs:
   # The build job
