@@ -53,13 +53,3 @@ jobs:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - dist
-
-workflows:
-  version: 2
-  # The build and deploy workflow
-  build_and_deploy:
-    jobs:
-      - build
-      - heroku/deploy-via-git:
-          requires:
-            - build
