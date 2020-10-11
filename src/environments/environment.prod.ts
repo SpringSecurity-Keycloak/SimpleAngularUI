@@ -18,13 +18,13 @@ export const environment = {
   },
   authO: {
     issuer: 'https://dev-r1e4o7ny.us.auth0.com/',
-    clientId: '9XLqEdiegPL55OISpeXd6u4M3bnPGbcy',
+    clientId: 'WApFnlytcBQgmv06LB6d1r8X4vBfAASO',
     redirectUri: window.location.origin,
     scope: 'openid profile email',
     response_type: 'id_token token',
     logoutUrl:
-      'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=http://localhost:4200&client_id=9XLqEdiegPL55OISpeXd6u4M3bnPGbcy',
-    postLogoutRedirectUri: 'http://localhost:4200',
+      'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=https://dchacko-simple-angular-ui.herokuapp.com&client_id=WApFnlytcBQgmv06LB6d1r8X4vBfAASO',
+    postLogoutRedirectUri: 'https://dchacko-simple-angular-ui.herokuapp.com',
   },
 };
 
