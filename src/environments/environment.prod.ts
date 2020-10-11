@@ -23,7 +23,7 @@ export const environment = {
     scope: 'openid profile email',
     response_type: 'id_token token',
     logoutUrl:
-      'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=https://dchacko-simple-angular-ui.herokuapp.com&client_id=WApFnlytcBQgmv06LB6d1r8X4vBfAASO',
+      'https://dev-r1e4o7ny.us.auth0.com/v2/logout?federated&returnTo=https://dchacko-simple-angular-ui.herokuapp.com',
     postLogoutRedirectUri: 'https://dchacko-simple-angular-ui.herokuapp.com',
   },
 };
