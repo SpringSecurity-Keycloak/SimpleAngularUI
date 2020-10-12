@@ -1,5 +1,9 @@
 FROM node:13.12.0-alpine As builder
 
+COPY default.conf.template /etc/nginx/conf.d/default.conf.template
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
 WORKDIR /usr/src/app
 
 COPY package.json package-lock.json ./
