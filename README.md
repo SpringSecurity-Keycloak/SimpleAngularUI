@@ -1,5 +1,18 @@
 # SimpleAngularUI [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
 
+>A Simple Angular UI that logs in users using OpenId Implicit Flow. The UI can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
+
+# Installing and running this project
+<details>
+  <summary>Run the Angular App locally</summary>
+  
+  
+</details>
+
+
+<details>
+  <summary>Angular CLI commands</summary>
+  
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.3.
 
 ## Development server
@@ -25,3 +38,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+</details>
+
