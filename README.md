@@ -1,6 +1,6 @@
-# SimpleAngularUI [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
+# A Simple Angular UI Using OpenId Implicit Flow [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
 
->A Simple Angular UI that logs in users using OpenId Implicit Flow. The UI can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
+>A Simple Angular UI that logs in users using OpenId Implicit Flow. This intent of this project is to demonstrate an Angular App using the OpenId Implicit Fow, rather than Angular coding best practices. The SPA can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
 
 # Installing and running this project
 <details>
