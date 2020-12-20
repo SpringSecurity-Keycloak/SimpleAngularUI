@@ -41,3 +41,21 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 </details>
 
+<details>
+  <summary>Single Sign On With Auth0</summary>  
+  <kbd><img src="./documentation/Auth0/Sign-in-with-Auth0.png" /></kbd>
+</details>
+
+<details>
+  <summary>Single Sign On With Okta</summary>  
+  <kbd><img src="./documentation/Okta/Sign-in-with-Okta.png" /></kbd>
+</details>
+
+<details>
+  <summary>Single Sign On With KeyCloak</summary>  
+  <kbd><img src="./documentation/KeyCloak/Sign-in-with-KeyCloak.png" /></kbd>
+</details>
+
+  
+  
+
