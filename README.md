@@ -2,6 +2,10 @@
 
 >A Simple Angular UI that logs in users using OpenId Implicit Flow. This intent of this project is to demonstrate an Angular App using the OpenId Implicit Fow, rather than Angular coding best practices. The SPA can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
 
+Auth0 SSO           |  OKTA SSO |  KeyCloak SSO
+:-------------------------:|:-------------------------:|:-------------------------:
+![](./documentation/Auth0/Sign-in-with-Auth0.png)  |  ![](./documentation/Okta/Sign-in-with-Okta.png) | ![](./documentation/KeyCloak/Sign-in-with-KeyCloak.png)
+
 # Installing and running this project
 <details>
   <summary>Run the Angular App locally</summary>
@@ -39,21 +43,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-</details>
 
-<details>
-  <summary>Single Sign On With Auth0</summary>  
-  <kbd><img src="./documentation/Auth0/Sign-in-with-Auth0.png" /></kbd>
-</details>
-
-<details>
-  <summary>Single Sign On With Okta</summary>  
-  <kbd><img src="./documentation/Okta/Sign-in-with-Okta.png" /></kbd>
-</details>
-
-<details>
-  <summary>Single Sign On With KeyCloak</summary>  
-  <kbd><img src="./documentation/KeyCloak/Sign-in-with-KeyCloak.png" /></kbd>
 </details>
 
   
