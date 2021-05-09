@@ -1,6 +1,8 @@
 # A Simple Angular UI Using OpenId Implicit Flow [![CircleCI](https://circleci.com/gh/SpringSecurity-Keycloak/SimpleAngularUI.svg?style=shield)](https://app.circleci.com/pipelines/github/SpringSecurity-Keycloak/SimpleAngularUI)
 
->A Simple Angular UI that logs in users using OpenId Implicit Flow. This intent of this project is to demonstrate an Angular App using the OpenId Implicit Fow, rather than Angular coding best practices. The SPA can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
+Tech Stack ![service aws-lambda](https://img.shields.io/badge/-Java-green?style=social&logo=Java) ![service aws-lambda](https://img.shields.io/badge/-Spring-green?style=social&logo=Spring) ![service aws-lambda](https://img.shields.io/badge/-Auth0-green?style=social&logo=Auth0) ![service aws-lambda](https://img.shields.io/badge/-Okta-green?style=social&logo=Okta) ![service aws-lambda](https://img.shields.io/badge/-RedHatKeycloak-green?style=social&logo=Red+Hat)  ![service aws-lambda](https://img.shields.io/badge/-CircleCI-green?style=social&logo=CircleCI)
+
+This project is a simple Angular UI that logs in users using OpenId Implicit Flow. The SPA can successfully connect to OpenId compliant Identity Providers such as Keycloak, Okta and Auth0. Uses environment.ts to demonstrate switching between KeyCloak, Okta and Auth0 
 
 Auth0 SSO           |  OKTA SSO |  KeyCloak SSO
 :-------------------------:|:-------------------------:|:-------------------------:
